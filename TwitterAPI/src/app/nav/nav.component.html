@@ -1,12 +1,16 @@
-<header>
-  <div class="navbar">
-      <a routerLink ="/" class="heading">{{header}}</a>
-      <nav>
-          <ul>
-              <li><a routerLink="/">Home</a></li>
-              <li><a routerLink ="/TwitterSearch">Twitter Search</a></li>
-              <li><a routerLink ="/RandomTweet">Random Tweet Finder</a></li>
-          </ul>
-      </nav>
-    </div>
-  </header>
+
+<nav class='navbar navbar-light bg-info navbar-expand-lg'>
+  <a routerLink ="/" class='navbar-brand'>{{header}}</a>
+  <button class='navbar-toggler' data-toggle='collapse' data-target="#yougo">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class='collapse navbar-collapse' id='yougo'>
+  <ul class='navbar-nav ml-auto'>
+      <li class='navbar-item'><a class='nav-link' routerLink="/">Home</a></li>
+      <li class='navbar-item'><a class='nav-link' routerLink ="/TwitterSearch">Twitter Search</a></li>
+      <li class='navbar-item'><a class='nav-link' routerLink ="/RandomTweet">Tweet Finder</a></li>
+  </ul>
+  </div>
+</nav>
+
+
