@@ -19,4 +19,8 @@ body img {
     height: 250px;
     width: 50%;
     object-fit: cover;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
