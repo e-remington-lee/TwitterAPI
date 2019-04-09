@@ -6,3 +6,17 @@ body h1 {
 body p {
     font-weight: 500;
 }
+
+body a {
+    color: black
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+body img {
+    height: 250px;
+    width: 50%;
+    object-fit: cover;
+}
