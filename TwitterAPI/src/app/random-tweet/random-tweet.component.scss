@@ -2,10 +2,20 @@
     display: flex;
   }
   
-  .column {
-    flex: 20%;
-    padding: 8px;
-  }
+  .column-md-2 {
+    padding: 0 8px 0 8px;
+    margin-top: -10px;
+    width: 20%;
+}
+.column .card-body {
+    height: 200px;
+
+}
+
+img {
+    height: 150px;
+
+}
 
 img:hover {
     cursor: pointer;
