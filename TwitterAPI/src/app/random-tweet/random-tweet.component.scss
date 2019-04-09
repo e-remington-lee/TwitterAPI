@@ -10,3 +10,7 @@
 img:hover {
     cursor: pointer;
 }
+
+.column .card{
+ background: transparentize($color: white, $amount: .4)
+}
