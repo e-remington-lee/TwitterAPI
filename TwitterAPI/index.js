@@ -12,8 +12,9 @@ app.listen(3003, () => {
 });
 
 var searchData1 = {
-    q: 'strawberry since:2018-1-1',
-    count: 10
+    q: 'futball since:2018-1-1',
+    count: 10,
+    lang: 'en'
 };
 
 
@@ -35,9 +36,10 @@ function getData(err, data, response) {
     console.log(listTweets.length+' tweets')
     console.log(profilePic.length+' pictures')
 
-    app.get("/", (request, response) => {
+    app.get("/user", (request, response) => {
         response.send(listTweets)
-    })
+
+    });
 };
 
 

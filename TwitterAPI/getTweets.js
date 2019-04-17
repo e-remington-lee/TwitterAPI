@@ -5,7 +5,8 @@ var T = new Twit(access);
 
 var searchData1 = {
     q: 'strawberry since:2018-1-1',
-    count: 50
+    count: 50,
+    lang: 'en'
 };
 
 
