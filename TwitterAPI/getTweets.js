@@ -1,4 +1,4 @@
-var access = require("./config.js");
+var access = require("../../config.js/index.js");
 
 var Twit = require('Twit');
 var T = new Twit(access);
