@@ -13,7 +13,7 @@ app.listen(3003, () => {
 
 var searchData1 = {
     q: 'strawberry since:2018-1-1',
-    count: 5
+    count: 10
 };
 
 
