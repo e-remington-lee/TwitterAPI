@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  onEnter() {
-    return console.log('Entered')
+  getData() {
+    return this.http.get('localhost:3003/api/bob')
   };
 }
