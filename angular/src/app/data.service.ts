@@ -9,6 +9,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get('localhost:3003/api/bob')
+    return this.http.get('api/bob')
   };
 }
