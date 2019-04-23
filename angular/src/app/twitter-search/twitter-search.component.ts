@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from "../data.service";
 
 @Component({
   selector: 'app-twitter-search',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwitterSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
+
+  searchBar(){
+    this.data.onEnter()
+  };
 
 }

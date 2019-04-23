@@ -6,5 +6,8 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   constructor() { }
-  
+
+  onEnter() {
+    return console.log('Entered')
+  };
 }
