@@ -24,9 +24,3 @@ app.get('/*', (req, res) =>{
     res.sendFile(__dirname+'/dist/index.html')
 
 });
-
-function myFunction(event) {
-    event.preventDefault();
-    var data = document.getElementById("data").value;
-    console.log(data);
-  }
