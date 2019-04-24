@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
 
-var server = app.listen(3003, () => {
+const access = require("./config.js");
+
+// const Twit = require('Twit');
+// const T = new Twit(access);
+
+app.listen(3003, () => {
     console.log('server initialized on 3003')
     console.log(__dirname)
 }); 
@@ -24,3 +29,5 @@ app.get('/*', (req, res) =>{
     res.sendFile(__dirname+'/dist/index.html')
 
 });
+
+
