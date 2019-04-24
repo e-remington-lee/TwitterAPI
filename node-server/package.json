@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/e-remington-lee/TwitterAPI#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "twit": "^2.2.11"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
