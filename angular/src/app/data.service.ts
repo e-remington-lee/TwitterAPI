@@ -8,7 +8,11 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData() {
-    return this.http.get('api/bob')
+  getRandom() {
+    return this.http.get('/api/randomTweets')
+  };
+
+  getSearch() {
+    return this.http.get('/api/searchTweets')
   };
 }

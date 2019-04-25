@@ -8,20 +8,22 @@ import { DataService } from "../data.service";
 })
 export class TwitterSearchComponent implements OnInit {
 
-  users: Object;
+  tweet: Object;
   searchText: String;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
- 
   };
 
+  onEnter(value: string){ 
+    this.searchText = value;
+    console.log(value);
 
-  trial(value: string){ 
-    this.searchText= value;
-    console.log(this.searchText);
+    this.data.getSearch().subscribe(data => {
+      this.tweet = data;
+      console.log(data);
+    })
   };
-
 
 }
