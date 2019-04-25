@@ -53,18 +53,18 @@ app.get('/api/searchTweets', (req, res) => {
     
     T.get('search/tweets', userRequest, function (err, data, response) {  
         var tweet = data.statuses;
-        // let listTweets = [];
-        // let profilePic = []
+        let listTweets = [];
+        let profilePic = []
     
-        // tweet.forEach(function(item){
-        //    listTweets.push(item.text);
-        //    profilePic.push(item.profile_img_url);
-        // });
+        tweet.forEach(function(item){
+           listTweets.push(item.text);
+           profilePic.push(item.profile_img_url);
+        });
         // listTweets.forEach(function(item){
         //     console.log(item + '\n')
         // });
-        
-        res.send(tweet[0]);
+        console.log(listTweets)
+        res.send([listTweets[0]]);
     });
 });
 

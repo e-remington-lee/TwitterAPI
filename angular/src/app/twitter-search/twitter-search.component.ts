@@ -18,6 +18,7 @@ export class TwitterSearchComponent implements OnInit {
 
   onEnter(value: string){ 
     this.searchText = value;
+    
     console.log(value);
 
     this.data.getSearch().subscribe(data => {
