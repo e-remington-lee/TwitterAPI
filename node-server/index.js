@@ -44,7 +44,7 @@ app.get('/api/randomTweets', (req, res) => {
 })
 
 app.get('/api/searchTweets', (req, res) => {
-    var queryString = 'strawberry'
+    var queryString = req.query.q
     var userRequest = {
         q: `'${queryString} since:2019-1-1'`,
         count: 5,
