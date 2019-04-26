@@ -14,5 +14,6 @@ export class DataService {
 
   getSearch() {
     return this.http.get('/api/searchTweets')
+    
   };
 }

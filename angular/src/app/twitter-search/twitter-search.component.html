@@ -2,9 +2,12 @@
 
     <div class="container"> 
             <div class='form-group'>
-              <input #search type='search' class='form-control' 
+              <a href='/?q={{searchText}}'></a>
+              <input #search id='searchBar' type='text' name='q' class='form-control' 
               placeholder="What would you like to search?" (keyup.enter)='onEnter(search.value)'>
-            </div>             
+      
+            </div>  
+         
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Search Results</h5>

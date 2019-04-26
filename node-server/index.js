@@ -16,7 +16,7 @@ app.use(express.static(__dirname+'/dist'));
 
 
 app.get('/api/randomTweets', (req, res) => {
-  
+    
     var timelineRequest = {
         screen_name: 'elonmusk',
         count: 10,
@@ -44,9 +44,10 @@ app.get('/api/randomTweets', (req, res) => {
 })
 
 app.get('/api/searchTweets', (req, res) => {
+    var queryString = 'strawberry'
     var userRequest = {
-        q: 'strawberry since:2018-1-1',
-        count: 4,
+        q: `'${queryString} since:2019-1-1'`,
+        count: 5,
         lang: 'en'
     };
     
@@ -60,11 +61,12 @@ app.get('/api/searchTweets', (req, res) => {
            listTweets.push(item.text);
            profilePic.push(item.profile_img_url);
         });
-        // listTweets.forEach(function(item){
-        //     console.log(item + '\n')
-        // });
-        console.log(listTweets)
-        res.send([listTweets[0]]);
+        var length1 = listTweets.length-1
+        console.log(length1)
+        let randomSelection1 = Math.floor(Math.random()*(length1+1));
+
+        console.log(randomSelection1)
+        res.send([listTweets[randomSelection1]]);
     });
 });
 
