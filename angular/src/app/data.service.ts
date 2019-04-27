@@ -12,8 +12,8 @@ export class DataService {
     return this.http.get('/api/randomTweets')
   };
 
-  getSearch() {
-    return this.http.get('/api/searchTweets')
+  getSearch(searchQuery) {
+    return this.http.get('/api/searchTweets?q='+searchQuery)
   
   };
 }

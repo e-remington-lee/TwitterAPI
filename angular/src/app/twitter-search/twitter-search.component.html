@@ -1,12 +1,12 @@
 <body>
     <div class="container"> 
-      <form>
+    
             <div class='form-group'>
-              <a href='/?q={{searchText}}'></a>
-              <input #search id='searchBar' type='text' name='q' class='form-control' 
-              placeholder="What would you like to search?" (keyup.enter)='onEnter(search.value)'>
-              </div>  
-          </form>
+
+              <input #search id='searchBar' type='text' [(ngModel)]='searchQuery' class='form-control' 
+              placeholder="What would you like to search?" (keyup.enter)='onEnter()'>
+            </div>
+        
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Search Results</h5>

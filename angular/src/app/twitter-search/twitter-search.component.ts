@@ -9,20 +9,17 @@ import { DataService } from "../data.service";
 export class TwitterSearchComponent implements OnInit {
 
   tweet: Object;
-  searchText: String;
+  searchQuery: String;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
   };
 
-  onEnter(value: string){ 
-    this.searchText = value;
-  
-    console.log(value);
-   
+  onEnter(){ 
 
-    this.data.getSearch().subscribe(data => {
+
+    this.data.getSearch(this.searchQuery).subscribe(data => {
       this.tweet = data;
       console.log(data);
     })
