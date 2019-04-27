@@ -4,8 +4,8 @@
             <div class='column-md-2'>
                 <div class='card'>
                     <div class='card-body'>
-                        <img class='card-img-top' alt="home-left" 
-                            src="https://i.imgur.com/CNhZzYY.jpg">
+                        <a (click)='random()'><img class='card-img-top' alt="home-left" 
+                            src="https://i.imgur.com/CNhZzYY.jpg"></a>
                         <h5>Elon Musk</h5>
                         <p>Tech Entrepreneur</p>
                     </div>
@@ -56,6 +56,7 @@
         <div class='card mt-3'>
             <div class='card-body'>
                 <h5 class='card-title'>Search Results</h5>
+                <p>{{randomTweet}}</p>
             </div>
 
 

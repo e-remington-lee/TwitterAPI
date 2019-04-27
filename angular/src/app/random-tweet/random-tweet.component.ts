@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from "../data.service";
 
 @Component({
   selector: 'app-random-tweet',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RandomTweetComponent implements OnInit {
 
-  constructor() { }
+  randomTweet: Object;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
 
+  random() {
+    this.data.getRandom().subscribe(data => {
+      this.randomTweet = data;
+  })
+}
 }
