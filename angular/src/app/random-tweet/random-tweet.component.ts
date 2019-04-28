@@ -15,6 +15,7 @@ export class RandomTweetComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.person ='Click a Picture to View One of Their Recent Tweets!'
   }
 
   random() {
@@ -25,13 +26,29 @@ export class RandomTweetComponent implements OnInit {
   }
 
   elon() {
-    this.person = 'Elon Musk';
+    //images are 400x400
+    this.person = 'Elon Musk Tweeted:';
     this.queryPerson ='elonmusk';
   }
 
   constance() {
-    this.person = 'Constance Wu';
+    this.person = 'Constance Wu Tweeted:';
     this.queryPerson ='constancewu';
+  }
+
+  gal() {
+    this.person = 'Gal Gadot Tweeted:';
+    this.queryPerson ='galgadot';
+  }
+
+  daymond() {
+    this.person = 'Daymond John Tweeted:';
+    this.queryPerson ='thesharkdaymond';
+  }
+
+  ben() {
+    this.person = 'Ben&Jerry\'s Tweeted:';
+    this.queryPerson ='benandjerrys';
   }
 
 }
