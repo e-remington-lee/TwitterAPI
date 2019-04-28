@@ -6,10 +6,14 @@ const access = require("./config.js");
 const Twit = require('Twit');
 const T = new Twit(access);
 
-app.listen(3003, () => {
-    console.log('server initialized on 3003')
-    console.log(__dirname)
-}); 
+// app.listen(3003, () => {
+//     console.log('server initialized on 3003')
+//     console.log(__dirname)
+// }); 
+
+app.listen(process.env.PORT || 8080, () => {
+    console.log('listening on 8080...')
+});
 
 
 app.use(express.static(__dirname+'/dist'));
