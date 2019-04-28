@@ -6,7 +6,7 @@
       "test": "echo \"Error: no test specified\" && exit 1",
       "watch": "concurrently \"nodemon index.js\" \"cd ../angular && ng build --watch\"",
       "start": "node ./node-server/index.js",
-      "postinstall": "cd ./angular && ng build --aot --target=production"
+      "postinstall": "cd ./angular && ng build --aot --prod"
     },
     "repository": {
       "type": "git",
