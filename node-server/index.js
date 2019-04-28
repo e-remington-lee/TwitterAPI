@@ -19,9 +19,9 @@ app.get('/api/randomTweets', (req, res) => {
     
     var timelineRequest = {
         screen_name: 'elonmusk',
-        count: 20,
+        count: 25,
         include_rts: false,
-        exclude_replies: true,
+        exclude_replies: false,
         trim_user: true
     };
     
@@ -33,12 +33,13 @@ app.get('/api/randomTweets', (req, res) => {
         userTweet.forEach(function(item){
             listTweets.push(item.text);
         });
+
         length = listTweets.length;
-        // console.log(length+' elon tweets');
-        let randomSelection = Math.floor(Math.random()*(length+1));
-        // console.log(listTweets[0]);
-        
-        res.send(listTweets[0])
+    
+        let randomSelection = Math.floor(Math.random()*(length));
+        console.log('list length: '+length)
+        console.log(randomSelection)
+        res.send(listTweets[randomSelection])
     });
 })
 
@@ -68,14 +69,13 @@ app.get('/api/searchTweets', (req, res) => {
         });
         var length1 = listTweets.length-1
  
-        let randomSelection1 = Math.floor(Math.random()*(length1+1));
+        let randomSelection1 = Math.floor(Math.random()*(length1));
 
         console.log(a[randomSelection1])
         console.log(b[randomSelection1])
         console.log(c[randomSelection1])
-        // listTweets.forEach(function(item) {res.send(item)
-        // })
-        res.send([listTweets[0]]);
+        console.log(listTweets)
+        res.send([listTweets[randomSelection1]]);
     });
 });
 

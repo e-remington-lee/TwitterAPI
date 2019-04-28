@@ -9,10 +9,15 @@ import { DataService } from "../data.service";
 export class RandomTweetComponent implements OnInit {
 
   randomTweet: Object;
+  person: String;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
+  }
+
+  elon() {
+    this.person = 'Elon Musk'
   }
 
   random() {
