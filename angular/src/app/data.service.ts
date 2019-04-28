@@ -8,8 +8,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getRandom() {
-    return this.http.get('/api/randomTweets', {responseType: 'text'})
+  getRandom(queryPerson) {
+    return this.http.get('/api/randomTweets?req='+queryPerson, {responseType: 'text'})
   };
 
   getSearch(searchQuery) {

@@ -16,9 +16,9 @@ app.use(express.static(__dirname+'/dist'));
 
 
 app.get('/api/randomTweets', (req, res) => {
-    
+    var queryPerson = req.query.req
     var timelineRequest = {
-        screen_name: 'elonmusk',
+        screen_name: queryPerson,
         count: 25,
         include_rts: false,
         exclude_replies: false,
@@ -39,6 +39,7 @@ app.get('/api/randomTweets', (req, res) => {
         let randomSelection = Math.floor(Math.random()*(length));
         console.log('list length: '+length)
         console.log(randomSelection)
+        console.log(queryPerson)
         res.send(listTweets[randomSelection])
     });
 })
