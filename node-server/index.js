@@ -46,7 +46,7 @@ app.get('/api/randomTweets', (req, res) => {
 app.get('/api/searchTweets', (req, res) => {
     var queryString = req.query.q
     var userRequest = {
-        q: `'${queryString} since:2019-1-1'`,
+        q: `${queryString} until:2019-4-25`,
         count: 5,
         lang: 'en'
     };
