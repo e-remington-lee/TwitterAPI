@@ -25,19 +25,18 @@ app.get('/api/randomTweets', (req, res) => {
         trim_user: true
     };
     
-    
     T.get('statuses/user_timeline', timelineRequest, function (err, data, response) { 
     
         var userTweet = data;
         let listTweets = [];
      
         userTweet.forEach(function(item){
-            listTweets.push(item);
+            listTweets.push(item.text);
         });
         length = listTweets.length
         console.log(length+' elon tweets');
         let randomSelection = Math.floor(Math.random()*(length+1));
-        console.log(listTweets.text)
+        console.log(listTweets[0])
         
         res.send(listTweets[0])
     });

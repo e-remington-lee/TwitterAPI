@@ -1,34 +1,34 @@
-var access = require("config.js");
+var access = require("./config.js");
 
 var Twit = require('Twit');
 var T = new Twit(access);
 
-var searchData1 = {
-    q: 'strawberry since:2018-1-1',
-    count: 40,
-    lang: 'en'
-};
+// var searchData1 = {
+//     q: 'strawberry since:2018-1-1',
+//     count: 40,
+//     lang: 'en'
+// };
 
 
-T.get('search/tweets', searchData1, getData);
+// T.get('search/tweets', searchData1, getData);
 
 
 
-function getData(err, data, response) {
-    var tweet = data.statuses;
-    let listTweets = [];
-    let profilePic = []
+// function getData(err, data, response) {
+//     var tweet = data.statuses;
+//     let listTweets = [];
+//     let profilePic = []
 
-    tweet.forEach(function(item){
-       listTweets.push(item.text);
-       profilePic.push(item.profile_img_url);
-    });
-    listTweets.forEach(function(item){
-        console.log(item + '\n')
-    });
-    console.log(listTweets.length+' tweets')
-    console.log(profilePic.length+' pictures')
-};
+//     tweet.forEach(function(item){
+//        listTweets.push(item.text);
+//        profilePic.push(item.profile_img_url);
+//     });
+//     listTweets.forEach(function(item){
+//         console.log(item + '\n')
+//     });
+//     console.log(listTweets.length+' tweets')
+//     console.log(profilePic.length+' pictures')
+// };
 
 
 var serachData2 = {
