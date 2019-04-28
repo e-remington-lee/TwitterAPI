@@ -1,0 +1,36 @@
+{
+    "name": "twitter-search-api-erl",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "watch": "concurrently \"nodemon index.js\" \"cd ../angular && ng build --watch\"",
+      "start": "node index.js",
+      "postinstall": "ng build --aot --prod"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/e-remington-lee/TwitterAPI.git"
+    },
+    "author": "Remington",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/e-remington-lee/TwitterAPI/issues"
+    },
+    "homepage": "https://github.com/e-remington-lee/TwitterAPI#readme",
+    "dependencies": {
+      "express": "^4.16.4",
+      "twit": "^2.2.11"
+    },
+    "devDependencies": {
+      "concurrently": "^4.1.0",
+      "nodemon": "^1.18.11"
+    },
+    "description": "",
+  
+    "engines": {
+      "node": "~10.15.3",
+      "npm": "~6.4.1"
+    }
+  }
+  
