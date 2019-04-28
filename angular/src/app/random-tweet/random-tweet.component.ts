@@ -18,6 +18,7 @@ export class RandomTweetComponent implements OnInit {
   random() {
     this.data.getRandom().subscribe(data => {
       this.randomTweet = data;
+      console.log(data)
   })
 }
 }

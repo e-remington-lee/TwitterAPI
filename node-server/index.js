@@ -33,10 +33,10 @@ app.get('/api/randomTweets', (req, res) => {
         userTweet.forEach(function(item){
             listTweets.push(item.text);
         });
-        length = listTweets.length
-        console.log(length+' elon tweets');
+        length = listTweets.length;
+        // console.log(length+' elon tweets');
         let randomSelection = Math.floor(Math.random()*(length+1));
-        console.log(listTweets[0])
+        // console.log(listTweets[0]);
         
         res.send(listTweets[0])
     });
@@ -75,7 +75,7 @@ app.get('/api/searchTweets', (req, res) => {
         console.log(c[randomSelection1])
         // listTweets.forEach(function(item) {res.send(item)
         // })
-        res.send([listTweets[randomSelection1]]);
+        res.send([listTweets[0]]);
     });
 });
 
