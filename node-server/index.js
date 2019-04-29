@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
 // const access = require("./config.js");
 
-const Twit = require('Twit');
+const Twit = require('twit');
 const T = new Twit({
     consumer_key: process.env.consumer_key,
     consumer_secret:  process.env.consumer_secret,
