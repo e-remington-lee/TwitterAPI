@@ -1,70 +1,69 @@
 {
-    "name": "twitter-search-api-erl",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "watch": "concurrently \"nodemon index.js\" \"cd ../angular && ng build --watch\"",
-      "start": "node ./node-server/index.js",
-      "postinstall": "cd ./angular && ng build --aot --prod"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/e-remington-lee/TwitterAPI.git"
-    },
-    "author": "Remington",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/e-remington-lee/TwitterAPI/issues"
-    },
-    "homepage": "https://github.com/e-remington-lee/TwitterAPI#readme",
-    "dependencies": {
-        "@angular/cli": "~7.3.7",
-        "@angular/compiler-cli": "~7.2.0",
-      "@angular/animations": "~7.2.0",
-      "@angular/common": "~7.2.0",
-      "@angular/compiler": "~7.2.0",
-      "@angular/core": "~7.2.0",
-      "@angular/forms": "~7.2.0",
-      "@angular/platform-browser": "~7.2.0",
-      "@angular/platform-browser-dynamic": "~7.2.0",
-      "@angular/router": "~7.2.0",
-      "body-parser": "^1.18.3",
-      "core-js": "^2.5.4",
-      "express": "^4.16.4",
-      "rxjs": "~6.3.3",
-      "tar": "^4.4.8",
-      "tslib": "^1.9.0",
-      "twit": "^2.2.11",
-      "underscore": "^1.9.1",
-      "zone.js": "~0.8.26"
-    },
-    "devDependencies": {
-        "@angular-devkit/build-angular": "~0.13.0",
-        "@angular/language-service": "~7.2.0",
-        "@types/node": "~8.9.4",
-        "@types/jasmine": "~2.8.8",
-        "@types/jasminewd2": "~2.0.3",
-        "codelyzer": "~4.5.0",
-        "jasmine-core": "~2.99.1",
-        "jasmine-spec-reporter": "~4.2.1",
-        "karma": "~4.0.0",
-        "karma-chrome-launcher": "~2.2.0",
-        "karma-coverage-istanbul-reporter": "~2.0.1",
-        "karma-jasmine": "~1.1.2",
-        "karma-jasmine-html-reporter": "^0.2.2",
-        "protractor": "~5.4.0",
-        "ts-node": "~7.0.0",
-        "tslint": "~5.11.0",
-        "typescript": "~3.2.2",
-      "concurrently": "^4.1.0",
-      "nodemon": "^1.18.11"
-    },
-    "description": "",
-  
-    "engines": {
-      "node": "10.15.3",
-      "npm": "6.4.1"
-    }
+  "name": "twitter-search-api-erl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "concurrently \"nodemon index.js\" \"cd ../angular && ng build --watch\"",
+    "start": "node ./node-server/index.js",
+    "postinstall": "cd ./angular && ng build --aot --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-remington-lee/TwitterAPI.git"
+  },
+  "author": "Remington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/e-remington-lee/TwitterAPI/issues"
+  },
+  "homepage": "https://github.com/e-remington-lee/TwitterAPI#readme",
+  "dependencies": {
+    "@angular/animations": "~7.2.0",
+    "@angular/cli": "~7.3.7",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
+    "body-parser": "^1.18.3",
+    "core-js": "^2.5.4",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "rxjs": "~6.3.3",
+    "tar": "^4.4.8",
+    "tslib": "^1.9.0",
+    "twit": "^2.2.11",
+    "underscore": "^1.9.1",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular/language-service": "~7.2.0",
+    "@types/node": "~8.9.4",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "~4.5.0",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.2.2",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11"
+  },
+  "description": "",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
   }
-  
+}

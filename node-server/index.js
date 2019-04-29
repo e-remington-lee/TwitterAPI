@@ -1,19 +1,26 @@
 const express = require('express');
 const app = express();
-
+const dotenv = require('dotenv');
+dotenv.config({path: '../.env'});
 const access = require("./config.js");
 
 const Twit = require('Twit');
-const T = new Twit(access);
+const T = new Twit({
+    consumer_key: process.env.consumer_key,
+    consumer_secret:  process.env.consumer_secret,
+    access_token: process.env.access_token,
+    access_token_secret: process.env.access_token_secret
+});
 
-app.listen(3004, () => {
-    console.log('server initialized on 3003')
-    console.log(__dirname)
-}); 
+// app.listen(3003, () => {
+//     console.log('server initialized on 3003')
+//     console.log(__dirname)
+// }); 
 
-// app.listen(process.env.PORT || 8080, () => {
-//     console.log('listening on 8080...')
-// });
+app.listen(process.env.PORT, () => {
+    console.log(__dirname);
+    console.log(`listening on ${process.env.PORT}...`)
+});
 
 
 app.use(express.static(__dirname+'/dist'));
