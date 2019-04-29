@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
-const access = require("./config.js");
+// const access = require("./config.js");
 
 const Twit = require('Twit');
 const T = new Twit({
