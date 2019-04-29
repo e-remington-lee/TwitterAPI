@@ -12,6 +12,7 @@ const T = new Twit({
     access_token_secret: process.env.access_token_secret
 });
 
+
 // app.listen(3003, () => {
 //     console.log('server initialized on 3003')
 //     console.log(__dirname)
@@ -20,6 +21,7 @@ const T = new Twit({
 app.listen(process.env.PORT, () => {
     console.log(__dirname);
     console.log(`listening on ${process.env.PORT}...`)
+    console.log(process.env.consumer_key)
 });
 
 
