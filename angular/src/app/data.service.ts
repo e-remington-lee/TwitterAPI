@@ -9,7 +9,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getRandom(queryPerson) {
-    return this.http.get('/api/randomTweets?req='+queryPerson, {responseType: 'text'})
+    return this.http.get('/api/randomTweets?req='+queryPerson)
   };
 
   getSearch(searchQuery) {

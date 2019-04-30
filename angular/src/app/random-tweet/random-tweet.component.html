@@ -54,12 +54,18 @@
         </div>
 
         <div class='card mt-3'>
-            <div class='card-body'>
-                <h5 class='card-title'>{{person}}</h5>
-                <p class='card-text'>{{randomTweet}}</p>
+                <div class='card mt-3'>
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1"><img class ='mr-2' src='{{randomTweet[0].user.profile_image_url}}'>{{tweet.user.screen_name}}</h5>
+                          <!-- <small>{{randomTweet[0].user.created_at}}</small> -->
+                        </div>
+                        <p class="mb-1">{{randomTweet[0].text}}</p>
+                        <!-- <div  *ngIf="randomTweet[0].entities.hashtags.length != 0">
+                          <small>
+                          #{{randomTweet[0].entities.hashtags[0].text}}
+                          </small>
+                        </div> -->
+                    </div>
             </div>
-
-
-        </div>
     </div>
 </body>

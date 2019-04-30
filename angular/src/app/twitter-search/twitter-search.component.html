@@ -14,13 +14,10 @@
                 <small>{{tweet.user.created_at}}</small>
               </div>
               <p class="mb-1">{{tweet.text}}</p>
-              <div  *ngIf="tweet.entities.hashtags.length != 0">
-                <small>
-                #{{tweet.entities.hashtags[0].text}}
-                </small>
-              </div>
-           
-            </div>
+                <small *ngIf="tweet.entities.hashtags.length != 0">#{{tweet.entities.hashtags[0].text}}</small>
+                <div>
+                  <small *ngIf='tweet.truncated == true'>Tweet has been truncated</small> </div>
+                </div>
           </div>
 
 

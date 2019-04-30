@@ -14,17 +14,16 @@ export class TwitterSearchComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
+    
   };
 
   onEnter(){ 
-
-
     this.data.getSearch(this.searchQuery).subscribe(data => {
       this.jsonTweet = data;
       console.log(data)
-
-
     });
   };
+
+
 
 }

@@ -9,21 +9,30 @@ import { DataService } from "../data.service";
 export class RandomTweetComponent implements OnInit {
 
   randomTweet: Object;
-  queryPerson: String;
+  queryPerson: Object;
   person: String;
+  randomNumber: String;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.person ='Click a Picture to View One of Their Recent Tweets!'
+
+    // this.randomNumber = 
   }
 
   random() {
     this.data.getRandom(this.queryPerson).subscribe(data => {
+      // var listTweets =[];
+
+      // this.randomTweet = data.forEach(function(item){
+      //   listTweets.push(item.text);
+
       this.randomTweet = data;
       console.log(data)
-  })
+    });
   }
+  
 
   elon() {
     //images are 400x400
