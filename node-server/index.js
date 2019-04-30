@@ -54,7 +54,7 @@ app.get('/api/searchTweets', (req, res) => {
     var queryString = req.query.q
     var userRequest = {
         q: `${queryString} until:2019-4-25`,
-        count: 7,
+        count: 5,
         lang: 'en'
     };
     
@@ -73,7 +73,7 @@ app.get('/api/searchTweets', (req, res) => {
  
         let randomSelection1 = Math.floor(Math.random()*(length1));
 
-        // console.log(tweet)
+   
         // res.send([listTweets[0]]);
         res.send(tweet)
     });
