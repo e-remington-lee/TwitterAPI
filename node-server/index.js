@@ -2,10 +2,12 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
-const access = require("./config.js");
+// const access = require("./config.js");
+
+var todayDate = new Date().toISOString().slice(0,10);
 
 const Twit = require('twit');
-// const T = new Twit(access)
+
 
 const T = new Twit({
     consumer_key: process.env.consumer_key,
@@ -45,36 +47,33 @@ app.get('/api/randomTweets', (req, res) => {
     
         let randomSelection = Math.floor(Math.random()*(length));
 
-        // console.log(queryPerson)
-        res.send(listTweets[randomSelection])
+        console.log(length)
+        res.send(listTweets[randomSelection]);
     });
 })
 
 app.get('/api/searchTweets', (req, res) => {
     var queryString = req.query.q
     var userRequest = {
-        q: `${queryString} until:2019-4-25`,
-        count: 5,
+        q: `${queryString} until:${todayDate}`,
+        count: 10,
         lang: 'en'
     };
     
     
     T.get('search/tweets', userRequest, function (err, data, response) {  
         var tweet = data.statuses;
-        let listTweets = [];
-        let profilePic = [];
+        // let listTweets = [];
+        // let profilePic = [];
 
     
-        tweet.forEach(function(item){
-           listTweets.push(item.text);
-           profilePic.push(item.profile_img_url);
-        });
-        var length1 = listTweets.length
- 
-        let randomSelection1 = Math.floor(Math.random()*(length1));
+        // tweet.forEach(function(item){
+        //    listTweets.push(item.text);
+        //    profilePic.push(item.profile_img_url);
+        // });
+        // var length1 = listTweets.length
 
-   
-        // res.send([listTweets[0]]);
+      
         res.send(tweet)
     });
 });
