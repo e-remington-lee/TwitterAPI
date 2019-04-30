@@ -45,7 +45,7 @@ app.get('/api/randomTweets', (req, res) => {
     
         let randomSelection = Math.floor(Math.random()*(length));
 
-        console.log(queryPerson)
+        // console.log(queryPerson)
         res.send(listTweets[randomSelection])
     });
 })
@@ -69,12 +69,13 @@ app.get('/api/searchTweets', (req, res) => {
            listTweets.push(item.text);
            profilePic.push(item.profile_img_url);
         });
-        var length1 = listTweets.length-1
+        var length1 = listTweets.length
  
         let randomSelection1 = Math.floor(Math.random()*(length1));
 
-        console.log(tweet)
-        res.send([listTweets[randomSelection1]]);
+        // console.log(tweet)
+        // res.send([listTweets[0]]);
+        res.send(tweet)
     });
 });
 
