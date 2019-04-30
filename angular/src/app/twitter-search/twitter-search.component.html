@@ -10,11 +10,16 @@
         <div class="list-group">
             <div class="list-group-item flex-column align-items-start" *ngFor="let tweet of jsonTweet">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">{{tweet.text}}</h5>
-                <small>3 days ago</small>
+                <h5 class="mb-1"><img class ='mr-2' src='{{tweet.user.profile_image_url}}'>{{tweet.user.screen_name}}</h5>
+                <small>{{tweet.user.created_at}}</small>
               </div>
-              <p class="mb-1">Donec id elit non mi porta ec id elit non mi porta ec id elit non mi porta ec id elit non mi porta ec id elit non mi porta ec id elit non mi porta ec id elit non mi porta ec id elit non mi porta ec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-              <small>Donec id elit non mi porta.</small>
+              <p class="mb-1">{{tweet.text}}</p>
+              <div  *ngIf="tweet.entities.hashtags.length != 0">
+                <small>
+                #{{tweet.entities.hashtags[0].text}}
+                </small>
+              </div>
+           
             </div>
           </div>
 
