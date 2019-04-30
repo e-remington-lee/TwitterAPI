@@ -2,28 +2,22 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
-// const access = require("./config.js");
+const access = require("./config.js");
 
 const Twit = require('twit');
+// const T = new Twit(access)
+
 const T = new Twit({
     consumer_key: process.env.consumer_key,
-    consumer_secret:  process.env.consumer_secret,
+    consumer_secret: process.env.consumer_secret,
     access_token: process.env.access_token,
     access_token_secret: process.env.access_token_secret
 });
 
-
-// app.listen(3003, () => {
-//     console.log('server initialized on 3003')
-//     console.log(__dirname)
-// }); 
-
 app.listen(process.env.PORT, () => {
-    console.log(__dirname);
     console.log(`listening on ${process.env.PORT}...`)
-    console.log(process.env.consumer_key)
 });
-
+ 
 
 app.use(express.static(__dirname+'/dist'));
 
@@ -60,7 +54,7 @@ app.get('/api/searchTweets', (req, res) => {
     var queryString = req.query.q
     var userRequest = {
         q: `${queryString} until:2019-4-25`,
-        count: 5,
+        count: 7,
         lang: 'en'
     };
     
@@ -69,25 +63,17 @@ app.get('/api/searchTweets', (req, res) => {
         var tweet = data.statuses;
         let listTweets = [];
         let profilePic = [];
-        let a = [];
-        let b = [];
-        let c = [];
+
     
         tweet.forEach(function(item){
            listTweets.push(item.text);
-           b.push(item.in_reply_to_status_id);
-           a.push(item.retweeted);
-           c.push(item.retweet_count);
            profilePic.push(item.profile_img_url);
         });
         var length1 = listTweets.length-1
  
         let randomSelection1 = Math.floor(Math.random()*(length1));
 
-        console.log(a[randomSelection1])
-        console.log(b[randomSelection1])
-        console.log(c[randomSelection1])
-        console.log(listTweets)
+        console.log(tweet)
         res.send([listTweets[randomSelection1]]);
     });
 });
