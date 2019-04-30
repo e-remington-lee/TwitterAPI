@@ -8,8 +8,9 @@ import { DataService } from "../data.service";
 })
 export class TwitterSearchComponent implements OnInit {
 
-  tweet: Array<string>;
-  jsonTweet: JSON;
+  tweet1Text: String;
+  tweet1IMG: String;
+  jsonTweet: Object;
   searchQuery: String;
 
   constructor(private data: DataService) { }
@@ -22,15 +23,11 @@ export class TwitterSearchComponent implements OnInit {
 
     this.data.getSearch(this.searchQuery).subscribe(data => {
       this.jsonTweet = data;
+      console.log(data)
+      this.tweet1Text = this.jsonTweet[0].text
+      this.tweet1IMG= this.jsonTweet[0].user.profile_image_url
 
-      this.tweet = this.jsonTweet.map(this.tweet => data[0].text);
-
-      // for (let n=0; n < 5; n++){
-      //   this.tweet.push(data[n].text)
-      // }
-      // console.log(this.tweet);
-      // console.log(data);
-    })
+    });
   };
 
 }
