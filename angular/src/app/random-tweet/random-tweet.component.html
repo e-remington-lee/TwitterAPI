@@ -63,9 +63,9 @@
                 
                         <div class="d-flex w-100 justify-content-between">
                           <h5 class="mb-2"><img id='srcImg' class ='mr-2' src={{tweetImage}}>{{person}}</h5>
-                          <small class='mr-2'>{{randomTweet[0].created_at}}</small>
+                          <small class='mr-2'>{{randomTweet[randomNumber].created_at}}</small>
                         </div>
-                        <p class="mb-2">{{randomTweet[0].text}}</p>
+                        <p class="mb-2">{{randomTweet[randomNumber].text}}</p>
                         <!-- <div  *ngIf="randomTweet[0].entities.hashtags.length != 0">
                           <small>
                           #{{randomTweet[0].entities.hashtags[0].text}}
