@@ -25,15 +25,9 @@ export class RandomTweetComponent implements OnInit {
   random() {
     this.data.getRandom(this.queryPerson).subscribe(data => {
       this.randomTweet = data;
-      Object.size = function(obj) {
-        var size = 0, key;
-        for (key in obj) {
-            if (obj.hasOwnProperty(key)) size++;
-        };
-        return size;
-    };
 
-    var size = Object.size(data)
+    var size = Object.keys(data).length;
+
     this.randomNumber = Math.floor(Math.random()*(size));
     });
   }
