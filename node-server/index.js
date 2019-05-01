@@ -45,10 +45,6 @@ app.get('/api/randomTweets', (req, res) => {
 
         length = listTweets.length;
     
-        let randomSelection = Math.floor(Math.random()*(length));
-
-        
-        // res.send(listTweets[randomSelection]);
         res.send(userTweet);
     });
 })
