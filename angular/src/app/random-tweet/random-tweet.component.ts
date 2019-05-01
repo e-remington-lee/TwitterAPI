@@ -35,7 +35,6 @@ export class RandomTweetComponent implements OnInit {
 
     var size = Object.size(data)
     this.randomNumber = Math.floor(Math.random()*(size));
-    console.log(data)
     });
   }
   
