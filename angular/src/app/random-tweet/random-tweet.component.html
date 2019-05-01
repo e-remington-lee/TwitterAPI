@@ -53,19 +53,25 @@
                 </div>
         </div>
 
-        <div class='card mt-3'>
-                <div class='card mt-3'>
+        <div class='p-1 mt-3 card' *ngIf='randomTweet == null'>
+            <div class ='card-body'>
+             <h4>Click an Image to Recieve a Random Tweet!</h4>
+            </div>
+           
+        </div>
+        <div class='p-3 card mt-3' *ngIf='randomTweet != null'>
+                
                         <div class="d-flex w-100 justify-content-between">
-                          <h5 class="mb-1"><img class ='mr-2' src='{{randomTweet[0].user.profile_image_url}}'>{{tweet.user.screen_name}}</h5>
-                          <!-- <small>{{randomTweet[0].user.created_at}}</small> -->
+                          <h5 class="mb-2"><img id='srcImg' class ='mr-2' src={{tweetImage}}>{{person}}</h5>
+                          <small class='mr-2'>{{randomTweet[0].created_at}}</small>
                         </div>
-                        <p class="mb-1">{{randomTweet[0].text}}</p>
+                        <p class="mb-2">{{randomTweet[0].text}}</p>
                         <!-- <div  *ngIf="randomTweet[0].entities.hashtags.length != 0">
                           <small>
                           #{{randomTweet[0].entities.hashtags[0].text}}
                           </small>
                         </div> -->
-                    </div>
+                   
             </div>
     </div>
 </body>

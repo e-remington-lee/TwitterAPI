@@ -23,3 +23,12 @@ img:hover {
 .column .card{
  background: transparentize($color: white, $amount: .4)
 }
+
+#srcImg {
+    height: 40px;
+    width: 40px;
+}
+
+#rando {
+    margin: 10 10 10 10;
+}
