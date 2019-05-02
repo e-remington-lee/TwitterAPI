@@ -10,9 +10,9 @@ export class RandomTweetComponent implements OnInit {
 
   randomTweet: Object;
   queryPerson: Object;
-  person: String;
-  tweetImage: String;
-  randomNumber: Number;
+  person: string;
+  tweetImage: string;
+  randomNumber: number;
 
   constructor(private data: DataService) { }
 

@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
 var todayDate = new Date().toISOString().slice(0,10);
+const twitterService = require('./twitterService');
 const Twit = require('twit');
 
 const T = new Twit({
