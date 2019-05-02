@@ -2,12 +2,8 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
-// const access = require("./config.js");
-
 var todayDate = new Date().toISOString().slice(0,10);
-
 const Twit = require('twit');
-
 
 const T = new Twit({
     consumer_key: process.env.consumer_key,
@@ -44,6 +40,9 @@ app.get('/api/randomTweets', (req, res) => {
         });
 
         length = listTweets.length;
+        var size = Object.keys(data).length;
+
+        this.randomNumber = Math.floor(Math.random()*(size));
     
         res.send(userTweet);
     });
@@ -60,17 +59,7 @@ app.get('/api/searchTweets', (req, res) => {
     
     T.get('search/tweets', userRequest, function (err, data, response) {  
         var tweet = data.statuses;
-        // let listTweets = [];
-        // let profilePic = [];
 
-    
-        // tweet.forEach(function(item){
-        //    listTweets.push(item.text);
-        //    profilePic.push(item.profile_img_url);
-        // });
-        // var length1 = listTweets.length
-
-      
         res.send(tweet)
     });
 });
