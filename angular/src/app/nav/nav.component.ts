@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  header: string = "Twitter API";
+  header: string = "Twitter Showcase";
 
   constructor() { }
 
