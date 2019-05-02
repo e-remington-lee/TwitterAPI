@@ -30,14 +30,6 @@ app.get('/api/randomTweets', (req, res) => {
     
     T.get('statuses/user_timeline', timelineRequest, function (err, data, response) { 
         var userTweet = data;
-        let listTweets = [];
-     
-        userTweet.forEach(function(item){
-            listTweets.push(item.text);
-        });
-        length = listTweets.length;
-        var size = Object.keys(data).length;
-        this.randomNumber = Math.floor(Math.random()*(size));
         res.send(userTweet);
     });
 });
