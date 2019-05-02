@@ -13,15 +13,13 @@ const T = new Twit({
 });
 
 app.listen(process.env.PORT, () => {
-    console.log(`listening on ${process.env.PORT}...`)
+    console.log(`listening on ${process.env.PORT}...`);
 });
- 
 
 app.use(express.static(__dirname+'/dist'));
 
-
 app.get('/api/randomTweets', (req, res) => {
-    var queryPerson = req.query.req
+    var queryPerson = req.query.req;
     var timelineRequest = {
         screen_name: queryPerson,
         count: 25,
@@ -31,25 +29,21 @@ app.get('/api/randomTweets', (req, res) => {
     };
     
     T.get('statuses/user_timeline', timelineRequest, function (err, data, response) { 
-    
         var userTweet = data;
         let listTweets = [];
      
         userTweet.forEach(function(item){
             listTweets.push(item.text);
         });
-
         length = listTweets.length;
         var size = Object.keys(data).length;
-
         this.randomNumber = Math.floor(Math.random()*(size));
-    
         res.send(userTweet);
     });
-})
+});
 
 app.get('/api/searchTweets', (req, res) => {
-    var queryString = req.query.q
+    var queryString = req.query.q;
     var userRequest = {
         q: `${queryString} until:${todayDate}`,
         count: 10,
@@ -59,16 +53,13 @@ app.get('/api/searchTweets', (req, res) => {
     
     T.get('search/tweets', userRequest, function (err, data, response) {  
         var tweet = data.statuses;
-
-        res.send(tweet)
+        res.send(tweet);
     });
 });
 
 
 app.get('/*', (req, res) =>{
-
     res.sendFile(__dirname+'/dist/index.html')
-
 });
 
 
