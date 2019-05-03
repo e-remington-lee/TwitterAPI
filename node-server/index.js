@@ -30,9 +30,11 @@ app.get('/api/randomTweets', (req, res) => {
     };
     
     T.get('statuses/user_timeline', timelineRequest, function (err, data, response) { 
-        var userTweet = data;
-        res.send(userTweet);
+        res.send(data);
     });
+        // twitterService.randomTweet(req.query.req).then(userData => {
+    //     res.send(userData);
+    // });
 });
 
 app.get('/api/searchTweets', (req, res) => {
@@ -45,9 +47,11 @@ app.get('/api/searchTweets', (req, res) => {
     
     
     T.get('search/tweets', userRequest, function (err, data, response) {  
-        var tweet = data.statuses;
-        res.send(tweet);
+        res.send(data.statuses);
     });
+    // twitterService.searchTweet(req.query.q).then(searchData => {
+    //     res.send(searchData);
+    // });
 });
 
 
