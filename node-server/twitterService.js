@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
 const Twit = require('twit');
 var todayDate = new Date().toISOString().slice(0,10);
-var APIerror = 'Error 344: Did not connect to API';
+var APIerror = 'Error 344: Did not connect to API...';
 
 const T = new Twit({
     consumer_key: process.env.consumer_key,
@@ -36,9 +36,9 @@ var searchTweet = function searchTweet(searchQuery) {
         q: searchQuery,
         count: 10,
         lang: 'en',
-        until: todayDate,
-        
+        until: todayDate,   
     };
+
     let searchPromise = new Promise((resolve,reject) => {
         if (searchQuery) {
             T.get('search/tweets', userRequest, function (err, data, response) {  
@@ -46,7 +46,7 @@ var searchTweet = function searchTweet(searchQuery) {
         } else {
             reject(APIerror);
         }
-    })
+    });
     return searchPromise;
 };
 
