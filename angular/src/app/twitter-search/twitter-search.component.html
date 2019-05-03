@@ -1,12 +1,9 @@
 <body>
-    <div class="container"> 
-    
+    <div class="container">    
             <div class='form-group'>
-
               <input #search id='searchBar' type='text' [(ngModel)]='searchQuery' class='form-control' 
               placeholder="What would you like to search?" (keyup.enter)='onEnter()'>
-            </div>
-        
+            </div>       
         <div class="list-group">
             <div class="list-group-item flex-column align-items-start" *ngFor="let tweet of jsonTweet">
               <div class="d-flex w-100 justify-content-between">
@@ -19,8 +16,5 @@
                   <small *ngIf='tweet.truncated == true'>Tweet has been truncated</small> </div>
                 </div>
           </div>
-
-
-
       </div>
 </body>

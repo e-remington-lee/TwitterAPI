@@ -20,38 +20,19 @@ app.listen(process.env.PORT, () => {
 app.use(express.static(__dirname+'/dist'));
 
 app.get('/api/randomTweets', (req, res) => {
-    var queryPerson = req.query.req;
-    var timelineRequest = {
-        screen_name: queryPerson,
-        count: 25,
-        include_rts: false,
-        exclude_replies: false,
-        trim_user: true
-    };
-    
-    T.get('statuses/user_timeline', timelineRequest, function (err, data, response) { 
-        res.send(data);
+        twitterService.randomTweet(req.query.req).then(userData => {
+        res.send(userData);
+    }).catch((rejectedRandom) => {
+        console.log(rejectedRandom);
     });
-        // twitterService.randomTweet(req.query.req).then(userData => {
-    //     res.send(userData);
-    // });
 });
 
 app.get('/api/searchTweets', (req, res) => {
-    var queryString = req.query.q;
-    var userRequest = {
-        q: `${queryString} until:${todayDate}`,
-        count: 10,
-        lang: 'en'
-    };
-    
-    
-    T.get('search/tweets', userRequest, function (err, data, response) {  
-        res.send(data.statuses);
-    });
-    // twitterService.searchTweet(req.query.q).then(searchData => {
-    //     res.send(searchData);
-    // });
+    twitterService.searchTweet(req.query.q).then(searchData => {
+        res.send(searchData);
+    }).catch((rejectedSearch) => {
+        console.log(rejectedSearch)
+    })
 });
 
 
