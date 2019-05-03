@@ -21,7 +21,7 @@ app.use(express.static(__dirname+'/dist'));
 
 app.get('/api/randomTweets', (req, res) => {
         twitterService.randomTweet(req.query.req).then(userData => {
-        res.send(userData);
+        res.send(userData);      
     }).catch((rejectedRandom) => {
         console.log(rejectedRandom);
     });

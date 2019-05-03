@@ -31,12 +31,13 @@ var randomTweet = function randomTweet(username){
     });
     return randomPromise;
 };
-
 var searchTweet = function searchTweet(searchQuery) {
     var userRequest = {
-        q: `${searchQuery} until:${todayDate}`,
+        q: searchQuery,
         count: 10,
-        lang: 'en'
+        lang: 'en',
+        until: todayDate,
+        
     };
     let searchPromise = new Promise((resolve,reject) => {
         if (searchQuery) {

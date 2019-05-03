@@ -8,7 +8,7 @@
             <div class="list-group-item flex-column align-items-start" *ngFor="let tweet of jsonTweet">
               <div class="d-flex w-100 justify-content-between">
                 <h5 class="mb-1"><img class ='mr-2' src='{{tweet.user.profile_image_url}}'>{{tweet.user.screen_name}}</h5>
-                <small>{{tweet.user.created_at}}</small>
+                <small>{{tweet.created_at}}</small>
               </div>
               <p class="mb-1">{{tweet.text}}</p>
                 <small *ngIf="tweet.entities.hashtags.length != 0">#{{tweet.entities.hashtags[0].text}}</small>
