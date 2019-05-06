@@ -1,29 +1,23 @@
-.row-md {
+  .row-md {
     display: flex;
   }
-  
-  .column-md-2 {
+
+.column-md-2 {
     padding: 0 8px 0 8px;
     margin-top: -10px;
-    width: 20%;
+    width: 50%;
 }
-.column .card-body {
-    height: 200px;
-}
-
-img {
-    height: 150px;
-
+.column-md-2 .card-body {
+    height: 260px;
 }
 
 img:hover {
     cursor: pointer;
 }
 
-.column .card{
- background: transparentize($color: white, $amount: .4)
+.column-md-2 img{
+    height:auto;
 }
-
 #srcImg {
     height: 40px;
     width: 40px;
