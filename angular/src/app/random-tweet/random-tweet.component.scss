@@ -25,25 +25,21 @@ img:hover {
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 700px) {
 
     .row-md {
         display: grid;
-      }
-    
+        grid-row-gap: 20px;
+    }
     .column-md-2 {
-        padding: 0 8px 0 8px;
-        margin-top: -10px;
         width: 100%;
     }
     .column-md-2 .card-body {
         height: 100%;
     }
-    
     img:hover {
         cursor: pointer;
     }
-    
     .column-md-2 img{
         height:auto;
         margin: 0 0 7px 0;
@@ -51,6 +47,5 @@ img:hover {
     #srcImg {
         height: 40px;
         width: 40px;
-    }
-    
+    }  
 }

@@ -24,3 +24,15 @@ body img {
         cursor: pointer;
     }
 }
+
+@media screen and (max-width: 700px) {
+    #home-page-cards {
+        margin: 0 0 10px 0;
+    }
+    body img {
+        width: 100%;
+    }
+    #git-hub-link {
+        margin-top: -20px;
+    }
+}

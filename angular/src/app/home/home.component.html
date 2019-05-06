@@ -1,16 +1,15 @@
 <html>
 <body>
-    <div class='container'>
+    <div class='container-fluid'>
         <div class='jumbotron text-dark bg-info shadow-sm'>
             <div class='col-md-10 px-0'>
-                <h1 class="display-4 font-italic">Twitter Showcase</h1>
+                <h1 class="display-4 font-italic">Twitter Showcase Application</h1>
                 <p class="lead m-4">A web application that uses Twitter's API</p>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6">
-                <div class="card flex-md-row shadow-sm">
+                <div class="card flex-md-row shadow-sm" id='home-page-cards'>
                     <div class="card-body">
                       <h5 class='card-title'><a routerLink='/TwitterSearch'>Twitter Search</a></h5>
                       <p class='card-text m-2'>Use Twitter's API to search for tweets with a specific phrase</p>
@@ -20,23 +19,23 @@
                 </div>
             </div>
             <div class="col-md-6">
-                    <div class="card flex-md-row shadow-sm">
-                        <div class="card-body">
-                          <h5 class='card-title'><a routerLink='/RandomTweet'>Random Tweet</a></h5>
-                          <p class='card-text m-2'>Retrieve a random tweet from 1 of 5 public figures</p>
+                <div class="card flex-md-row shadow-sm">
+                    <div class="card-body">
+                        <h5 class='card-title'><a routerLink='/RandomTweet'>Random Tweet</a></h5>
+                        <p class='card-text m-2'>Retrieve a random tweet from 1 of 5 public figures</p>
+                    </div>
+                    <img routerLink='/RandomTweet' class='card-img-right shadow-sm' alt='home-right' 
+                    src='https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'>
                 </div>
-                <img routerLink='/RandomTweet' class='card-img-right shadow-sm' alt='home-right' 
-                src='https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'>
-          </div>
-      </div>
-  </div>
-  <h3 class="font-italic border-bottom mt-5 text-light">
-    GitHub Repository
-  </h3>
-  <a class='lead mt-3 ml-3 text-light' href='https://github.com/e-remington-lee/TwitterAPI'>https://github.com/e-remington-lee/TwitterAPI</a>
-
-  
-</div>
+            </div>
+        </div>
+        <div id='git-hub-link'>
+            <h3 class="font-italic border-bottom mt-5 text-light">
+            GitHub Repository
+            </h3>
+            <a class='lead mt-3 ml-3 text-light' href='https://github.com/e-remington-lee/TwitterAPI'>https://github.com/e-remington-lee/TwitterAPI</a>
+        </div>
+    </div>
 </body>
 </html>
     
