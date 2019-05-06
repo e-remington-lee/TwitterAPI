@@ -8,7 +8,7 @@
     width: 50%;
 }
 .column-md-2 .card-body {
-    height: 260px;
+    height: 100%;
 }
 
 img:hover {
@@ -17,6 +17,7 @@ img:hover {
 
 .column-md-2 img{
     height:auto;
+    margin: 0 0 7px 0;
 }
 #srcImg {
     height: 40px;
