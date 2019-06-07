@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
 const Twit = require('twit');
 var todayDate = new Date().toISOString().slice(0,10);
+var APIerror = 'Error 344: Did not connect to API...';
 
 const T = new Twit({
     consumer_key: process.env.consumer_key,
@@ -21,8 +22,15 @@ var randomTweet = function randomTweet(username){
         exclude_replies: false,
         trim_user: true
     };
-
-    return T.get('statuses/user_timeline', timelineRequest)
+    let randomPromise = new Promise(function(resolve, reject) {
+        if (username) {
+                T.get('statuses/user_timeline', timelineRequest, function (err, data, response) { 
+            resolve(data)});
+        } else {
+            reject(APIerror);
+        };
+    });
+    return randomPromise
 };
 var searchTweet = function searchTweet(searchQuery) {
     var userRequest = {
@@ -32,7 +40,16 @@ var searchTweet = function searchTweet(searchQuery) {
         until: todayDate,   
     };
 
-    return T.get('search/tweets', userRequest)
+    let searchPromise = new Promise((resolve,reject) => {
+        if (searchQuery) {
+            T.get('search/tweets', userRequest, function (err, data, response) {  
+             resolve(data.statuses)});
+        } else {
+            reject(APIerror);
+        }
+    });
+    
+    return searchPromise
 };
 
 module.exports = {

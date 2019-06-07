@@ -12,7 +12,7 @@ app.use(express.static(__dirname+'/dist'));
 app.get('/api/randomTweets', (req, res) => {
         twitterService.randomTweet(req.query.req).then(userData => {
         res.send(userData);      
-    }).catch(() => {
+    }).catch((APIerror) => {
         console.log(APIerror);
     });
 });
@@ -20,7 +20,7 @@ app.get('/api/randomTweets', (req, res) => {
 app.get('/api/searchTweets', (req, res) => {
     twitterService.searchTweet(req.query.q).then(searchData => {
         res.send(searchData);
-    }).catch(() => {
+    }).catch((APIerror) => {
         console.log(APIerror);
     });
 });
