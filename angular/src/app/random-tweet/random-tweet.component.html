@@ -1,10 +1,10 @@
 <body>
-    <div class='container-fluid'>
+    <div class='container-fluid' id='page'>
         <div class='row-md'>
             <div class='column-md-2'>
                 <div class='card'>
                     <div class='card-body'>
-                        <a (click)='elon()' (click)='random()'><img class='card-img-top' alt="home-left" 
+                        <a (click)='elon()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
                             src="https://i.imgur.com/CNhZzYY.jpg"></a>
                         <h5>Elon Musk</h5>
                         <p>Tech Entrepreneur</p>
@@ -14,7 +14,7 @@
             <div class='column-md-2'>
                     <div class='card'>
                         <div class='card-body'>
-                            <a (click)='constance()' (click)='random()'><img class='card-img-top' alt="home-left" 
+                            <a (click)='constance()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
                                 src="https://speakerbookingagency.com/wp-content/uploads/bb-plugin/cache/constancewu-square.jpg"></a>
                             <h5>Constance Wu</h5>
                             <p>Movie Actress</p>
@@ -24,7 +24,7 @@
             <div class='column-md-2'>
                 <div class='card'>
                     <div class='card-body'>
-                        <a (click)='gal()' (click)='random()'><img class='card-img-top' alt="home-left" 
+                        <a (click)='gal()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
                             src="https://i.imgur.com/YxrCsT6.jpg"></a>
                         <h5>Gal Gadot</h5>
                         <p>Movie Actress</p>
@@ -34,7 +34,7 @@
             <div class='column-md-2'>
                 <div class='card'>
                     <div class='card-body'>
-                        <a (click)='daymond()' (click)='random()'><img class='card-img-top' alt="home-left" 
+                        <a (click)='daymond()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
                             src="https://pbs.twimg.com/profile_images/1048022980863954944/eZvGANn0_400x400.jpg"></a>
                         <h5>Daymond John</h5>
                         <p>Entrepreneur</p>
@@ -44,7 +44,7 @@
             <div class='column-md-2'>
                     <div class='card'>
                         <div class='card-body'>
-                            <a (click)='ben()' (click)='random()'><img class='card-img-top' alt="home-left" 
+                            <a (click)='ben()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
                                 src='https://www.benjerry.com/files/live/sites/systemsite/files/whats-new/6588-flavor-flops/6-Hazed-Confused-400x400.jpg'></a>
                             <h5>Ben&Jerry's</h5>
                             <p>Ice Cream Company</p>
@@ -52,6 +52,7 @@
                     </div>
                 </div>
             </div>
+        <div id='messageBox'></div>
         <div class='p-1 mt-3 card' *ngIf='randomTweet == null'>
             <div class ='card-body'>
              <h4>Click an Image to Receive a Random Tweet!</h4>

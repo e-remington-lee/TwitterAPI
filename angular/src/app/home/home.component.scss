@@ -1,38 +1,60 @@
 body h1 {
-    font-weight: bold;
-    margin: -10px 0 -15px 0; 
+  font-weight: bold;
+  margin: -10px 0 -15px 0;
 }
 
 body p {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 body a {
-    color: black;
+  color: black;
+}
+
+h3 {
+  color: white;
+}
+
+h3 a {
+  color: white;
+}
+
+#git-hub-link {
+  color: white
 }
 
 body a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body img {
-    height: 250px;
-    width: 50%;
-    object-fit: cover;
+  height: 250px;
+  width: 50%;
+  object-fit: cover;
 
-    &:hover{
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    #home-page-cards {
-        margin: 0 0 10px 0;
-    }
-    body img {
-        width: 100%;
-    }
-    #git-hub-link {
-        margin-top: -20px;
-    }
+  #home-page-cards {
+    margin: 0 0 10px 0;
+  }
+
+  body img {
+    width: 100%;
+  }
+
+  #git-hub {
+    margin-top: -20px;
+  }
+
+  h3 {
+    color: black;
+  }
+
+  #git-hub-link {
+    color: black;
+  }
 }

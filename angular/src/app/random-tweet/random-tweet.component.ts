@@ -31,6 +31,11 @@ export class RandomTweetComponent implements OnInit {
     this.randomNumber = Math.floor(Math.random()*(size));
     });
   }
+
+  scrollBottom() {
+    var messageBox = document.getElementById("messageBox");  
+    messageBox.scrollIntoView();
+  }
   
 
   elon() {
