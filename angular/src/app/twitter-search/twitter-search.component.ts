@@ -10,14 +10,17 @@ export class TwitterSearchComponent implements OnInit {
 
   jsonTweet: Object;
   searchQuery: string;
+  showSpinner: boolean = false;
 
   constructor(private data: DataService) { }
 
   ngOnInit() { }
 
-  onEnter(){ 
+  onEnter(){
+    this.showSpinner = true; 
     this.data.getSearch(this.searchQuery).subscribe(data => {
       this.jsonTweet = data;
+      this.showSpinner = false; 
     });
   }
 }

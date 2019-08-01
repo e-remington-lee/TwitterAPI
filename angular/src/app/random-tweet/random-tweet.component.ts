@@ -13,18 +13,20 @@ export class RandomTweetComponent implements OnInit {
   person: string;
   tweetImage: string;
   randomNumber: number;
+  showSpinner: boolean = false;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.person ='Click a Picture to View One of Their Recent Tweets!';
-
     this.randomNumber = 0;
   }
 
   random() {
+    this.showSpinner = true;
     this.data.getRandom(this.queryPerson).subscribe(data => {
       this.randomTweet = data;
+      this.showSpinner = false;
     
     var size = Object.keys(data).length;
 
@@ -48,7 +50,7 @@ export class RandomTweetComponent implements OnInit {
   constance() {
     this.person = 'Constance Wu Tweeted:';
     this.queryPerson ='constancewu';
-    this.tweetImage ='https://speakerbookingagency.com/wp-content/uploads/bb-plugin/cache/constancewu-square.jpg';
+    this.tweetImage ='https://www.popstaronline.com/wp-content/uploads/2019/07/072619_thumbnail002-400x400.jpg';
   }
 
   gal() {

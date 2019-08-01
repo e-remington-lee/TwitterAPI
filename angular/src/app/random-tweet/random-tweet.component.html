@@ -15,7 +15,7 @@
                     <div class='card'>
                         <div class='card-body'>
                             <a (click)='constance()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
-                                src="https://speakerbookingagency.com/wp-content/uploads/bb-plugin/cache/constancewu-square.jpg"></a>
+                                src="https://www.popstaronline.com/wp-content/uploads/2019/07/072619_thumbnail002-400x400.jpg"></a>
                             <h5>Constance Wu</h5>
                             <p>Movie Actress</p>
                         </div>
@@ -52,13 +52,16 @@
                     </div>
                 </div>
             </div>
+            
         <div id='messageBox'></div>
         <div class='p-1 mt-3 card' *ngIf='randomTweet == null'>
             <div class ='card-body'>
              <h4>Click an Image to Receive a Random Tweet!</h4>
             </div>         
         </div>
+        <app-spinner *ngIf='showSpinner'></app-spinner>
         <div class='p-3 card mt-3' *ngIf='randomTweet != null' id='result'>
+            
             <div class="d-flex w-100 justify-content-between">
                 <h3 class="mb-2"><img id='srcImg' class ='mr-2' src={{tweetImage}}>{{person}}</h3>
                 <small class='mr-2'>{{randomTweet[randomNumber].created_at}}</small>

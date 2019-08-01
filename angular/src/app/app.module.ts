@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { RandomTweetComponent } from './random-tweet/random-tweet.component';
 import { TwitterSearchComponent } from './twitter-search/twitter-search.component';
 import { NavComponent } from './nav/nav.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     RandomTweetComponent,
     TwitterSearchComponent,
-    NavComponent
+    NavComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
