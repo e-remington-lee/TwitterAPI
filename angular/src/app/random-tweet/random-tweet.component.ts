@@ -50,7 +50,8 @@ export class RandomTweetComponent implements OnInit {
   constance() {
     this.person = 'Constance Wu Tweeted:';
     this.queryPerson ='constancewu';
-    this.tweetImage ='https://www.popstaronline.com/wp-content/uploads/2019/07/072619_thumbnail002-400x400.jpg';
+    // this.tweetImage ='https://www.popstaronline.com/wp-content/uploads/2019/07/072619_thumbnail002-400x400.jpg';
+    this.tweetImage = '/dist/assets/constance.jpg';
   }
 
   gal() {
