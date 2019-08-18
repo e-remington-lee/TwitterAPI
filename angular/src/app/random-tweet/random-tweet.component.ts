@@ -44,32 +44,31 @@ export class RandomTweetComponent implements OnInit {
     //images are 400x400
     this.person = 'Elon Musk Tweeted:';
     this.queryPerson ='elonmusk';
-    this.tweetImage ='https://i.imgur.com/CNhZzYY.jpg';
+    this.tweetImage ='/assets/elon.jpg';
   }
 
   constance() {
     this.person = 'Constance Wu Tweeted:';
     this.queryPerson ='constancewu';
-    // this.tweetImage ='https://www.popstaronline.com/wp-content/uploads/2019/07/072619_thumbnail002-400x400.jpg';
-    this.tweetImage = '/dist/assets/constance.jpg';
+    this.tweetImage = '/assets/constance.jpg';
   }
 
   gal() {
     this.person = 'Gal Gadot Tweeted:';
     this.queryPerson ='galgadot';
-    this.tweetImage = 'https://i.imgur.com/YxrCsT6.jpg';
+    this.tweetImage = '/assets/gadot.jpg';
   }
 
   daymond() {
     this.person = 'Daymond John Tweeted:';
     this.queryPerson ='thesharkdaymond';
-    this.tweetImage = 'https://pbs.twimg.com/profile_images/1048022980863954944/eZvGANn0_400x400.jpg';
+    this.tweetImage = '/assets/daymond.jpg';
   }
 
   ben() {
     this.person = 'Ben&Jerry\'s Tweeted:';
     this.queryPerson ='benandjerrys';
-    this.tweetImage = 'https://www.benjerry.com/files/live/sites/systemsite/files/whats-new/6588-flavor-flops/6-Hazed-Confused-400x400.jpg';
+    this.tweetImage = '/assets/benjerry.jpg';
   }
 }
 
