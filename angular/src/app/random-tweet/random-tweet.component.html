@@ -15,7 +15,7 @@
                     <div class='card'>
                         <div class='card-body'>
                             <a (click)='constance()' (click)='random()' (click)='scrollBottom()'><img class='card-img-top' alt="home-left" 
-                                src="/assets/elon.jpg"></a>
+                                src="/assets/constance.jpg"></a>
                             <h5>Constance Wu</h5>
                             <p>Movie Actress</p>
                         </div>
@@ -59,14 +59,15 @@
              <h4>Click an Image to Receive a Random Tweet!</h4>
             </div>         
         </div>
-        <div class='p-3 card mt-3' *ngIf='randomTweet != null' id='result'>
+        <app-spinner *ngIf='showSpinner'></app-spinner>
+
+        <div class='p-3 card mt-3' *ngIf='randomTweet != null && showSpinner != true' id='result'>
             <div class="d-flex w-100 justify-content-between">
                 <h3 class="mb-2"><img id='srcImg' class ='mr-2' src={{tweetImage}}>{{person}}</h3>
                 <small class='mr-2'>{{randomTweet[randomNumber].created_at}}</small>
             </div>
                 <p class="mb-2">{{randomTweet[randomNumber].text}}</p>                  
         </div>
-        <app-spinner *ngIf='showSpinner'></app-spinner>
 
     </div>
 </body>

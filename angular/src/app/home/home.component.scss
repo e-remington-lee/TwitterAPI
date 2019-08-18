@@ -11,16 +11,8 @@ body a {
   color: black;
 }
 
-h3 {
-  color: white;
-}
-
-h3 a {
-  color: white;
-}
-
-#git-hub-link {
-  color: white
+#git-hub {
+  margin: 40px 0 0 0;
 }
 
 body a:hover {
@@ -53,8 +45,9 @@ body img {
   h3 {
     color: black;
   }
-
-  #git-hub-link {
-    color: black;
+  
+  #git-hub {
+    margin: 40px 0 0 0;
   }
+
 }
